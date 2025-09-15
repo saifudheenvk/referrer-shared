@@ -1,3 +1,5 @@
-const { copyFileSync } = require('fs');
+const { copyFileSync } = require("fs");
 
-copyFileSync('package.json', 'build/package.json');
+copyFileSync("package.json", "build/package.json");
+copyFileSync("README.md", "build/README.md");
+copyFileSync("LICENSE", "build/LICENSE");
