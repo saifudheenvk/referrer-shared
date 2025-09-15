@@ -1,6 +1,4 @@
 
-
-
 export {
     IUser,
     IUserRole,
@@ -32,3 +30,6 @@ export type { LoggerConfig, ElasticConfig } from './logger/logger.types';
 export { createWinstonLogger } from './logger/create-winston';
 export { createWinstonTransports } from './logger/transports';
 export { NestWinstonLogger } from './logger/nest-logger.adapter';
+
+export { LoginDto} from "./dto/auth/login.dto"
+export { RegisterDto } from "./dto/auth/register.dto"
