@@ -58,4 +58,6 @@ export interface ICreatUserPayload {
   password?: string;
   country: string;
   phoneNumber: string;
+  name: string;
+  role: string;
 }
