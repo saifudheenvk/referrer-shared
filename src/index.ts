@@ -27,3 +27,8 @@ export {
     PageConfigKey,
     StyleConfig
 } from './page.interface';
+
+export type { LoggerConfig, ElasticConfig } from './logger/logger.types';
+export { createWinstonLogger } from './logger/create-winston';
+export { createWinstonTransports } from './logger/transports';
+export { NestWinstonLogger } from './logger/nest-logger.adapter';

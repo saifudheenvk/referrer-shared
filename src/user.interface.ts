@@ -26,7 +26,6 @@ export interface IUser {
   createdAt: Date;
   updatedAt: Date;
   name: string;
-
 }
 
 export interface IPermissionDocument extends IPermission, Document {}
