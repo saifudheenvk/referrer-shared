@@ -23,8 +23,7 @@ export interface IUser {
   phoneNumber: string;
   role: Types.ObjectId | IUserRole; 
   company: string;
-  createdAt: Date;
-  updatedAt: Date;
+  name: string;
 }
 
 export interface IPermissionDocument extends IPermission, Document {}
