@@ -1,7 +1,6 @@
 
 
 export interface IUser {
-    _id: string;
     email: string;
     password: string;
     phoneNumber: string;
@@ -12,7 +11,6 @@ export interface IUser {
 
 
 export interface IUserRole {
-    id: string;
     name: string;
     type: RoleType;
     description: string;
@@ -21,7 +19,6 @@ export interface IUserRole {
 
 
   export interface IPermissionGroup {
-    id: string;
     name: string;
     description: string;
     permissions: IPermission[];
@@ -29,7 +26,6 @@ export interface IUserRole {
 
 
   export interface IPermission {
-    id: string;
     authority: string;
   }
 

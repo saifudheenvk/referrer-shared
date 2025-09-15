@@ -2,7 +2,6 @@ import { PageTypes, TileTypes } from "./page.enum";
 import { IUser } from "./user.interface";
 
 export interface PageType {
-    id: number;
     type: PageTypes;
     name: string;
     description: string;
@@ -10,14 +9,12 @@ export interface PageType {
   }
   
   export interface PageConfigKey {
-    id: number;
     field: string;
     type: string;
   }
   
   
   export interface Page {
-    id: number;
     name: string;
     pageType: PageType;
     createdAt: Date;
@@ -28,7 +25,6 @@ export interface PageType {
   }
   
   export interface TileConfig {
-    id: number;
     field: string;
     type: string;
     styles: StyleConfig[];
@@ -36,7 +32,6 @@ export interface PageType {
   
   
   export interface Tile {
-    id: number;
     name: string;
     description: string;
     styleKeys: StyleConfig[];
@@ -46,13 +41,11 @@ export interface PageType {
   }
   
   export interface TileType {
-    id: number;
     type: TileTypes;
     tileConfigs: TileConfig[];
   }
   
 export interface StyleConfig {
-    id: number;
     label: string;
     key: string;
     keyType: string;
