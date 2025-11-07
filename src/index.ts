@@ -7,7 +7,8 @@ export {
     RoleType,
     IUserDocument,
     IAuth,
-    ICreatUserPayload
+    ICreatUserPayload,
+    IUserResponse
 } from './user.interface';
 
 

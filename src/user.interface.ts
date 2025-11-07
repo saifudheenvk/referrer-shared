@@ -61,3 +61,7 @@ export interface ICreatUserPayload {
   name: string;
   role: string;
 }
+
+export interface IUserResponse extends IUser {
+  policies?: string[];
+}
