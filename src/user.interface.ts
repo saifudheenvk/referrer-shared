@@ -1,4 +1,5 @@
 import { Document, Types } from 'mongoose';
+import { ICompany } from './company.interface';
 
 export interface IPermission {
   authority: string;
@@ -22,7 +23,7 @@ export interface IUser {
   password?: string;
   phoneNumber: string;
   role: Types.ObjectId | IUserRole; 
-  company: string;
+  company: Types.ObjectId | ICompany;
   createdAt: Date;
   updatedAt: Date;
   name: string;
@@ -60,8 +61,4 @@ export interface ICreatUserPayload {
   phoneNumber: string;
   name: string;
   role: string;
-}
-
-export interface IUserResponse extends IUser {
-  policies?: string[];
 }

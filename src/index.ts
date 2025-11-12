@@ -7,9 +7,13 @@ export {
     RoleType,
     IUserDocument,
     IAuth,
-    ICreatUserPayload,
-    IUserResponse
+    ICreatUserPayload
 } from './user.interface';
+
+export {
+    ICompany,
+    ICompanyDocument
+} from './company.interface';
 
 
 export {
