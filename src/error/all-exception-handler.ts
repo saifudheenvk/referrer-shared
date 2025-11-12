@@ -5,9 +5,9 @@ import {
   HttpException,
   HttpStatus,
   Inject,
+  LoggerService
 } from '@nestjs/common';
 import { RpcException } from '@nestjs/microservices';
-import { LoggerService } from '@nestjs/common';
 import { throwError } from 'rxjs';
 
 @Catch()
