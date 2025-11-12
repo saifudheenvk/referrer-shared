@@ -39,3 +39,7 @@ export { NestWinstonLogger } from './logger/nest-logger.adapter';
 export {
     getElasticConfig
 } from './elastic/get-elastic-config';
+
+export { LoggingModule } from './logger/logger-module';
+
+export { AllExceptionsFilter } from './error/all-exception-handler';
