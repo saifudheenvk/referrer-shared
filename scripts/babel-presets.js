@@ -18,4 +18,8 @@ module.exports = () => ({
       },
     ],
   ],
+  plugins: [
+    // This plugin enables the parsing and transformation of NestJS decorators (@Module, @Injectable, etc.)
+    ['@babel/plugin-proposal-decorators', { 'legacy': true }]
+  ]
 });
