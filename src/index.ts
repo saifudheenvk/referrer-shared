@@ -22,14 +22,30 @@ export {
 } from './page.enum';
 
 export {
-    Page,
-    Tile,
-    TileType,
-    TileConfig,
-    PageType,
-    PageConfigKey,
-    StyleConfig
+    IPage,
+    IPageType,
+    IPageConfigKey,
+    IPageConfigValue,
+    IPageDocument,
+    IPageTypeDocument,
+    IPageConfigKeyDocument,
+    IPageConfigValueDocument
 } from './page.interface';
+
+export {
+    ITile,
+    ITileType,
+    ITileConfig,
+    IStyleConfig,
+    IStyleValue,
+    ITileConfigValue,
+    ITileDocument,
+    ITileTypeDocument,
+    ITileConfigDocument,
+    ITileConfigValueDocument,
+    IStyleConfigDocument,
+    IStyleValueDocument
+} from './tile.interface';
 
 export type { LoggerConfig, ElasticConfig } from './logger/logger.types';
 export { createWinstonLogger } from './logger/create-winston';

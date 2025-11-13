@@ -1,53 +1,36 @@
-import { PageTypes, TileTypes } from "./page.enum";
+import { PageTypes } from "./page.enum";
+import { ITile } from "./tile.interface";
 import { IUser } from "./user.interface";
 
-export interface PageType {
+export interface IPageType {
     type: PageTypes;
     name: string;
     description: string;
-    configKeys: PageConfigKey[];
+    configKeys: IPageConfigKey[];
   }
   
-  export interface PageConfigKey {
+  export interface IPageConfigKey {
     field: string;
     type: string;
   }
   
   
-  export interface Page {
+  export interface IPage {
     name: string;
-    pageType: PageType;
+    pageType: IPageType;
     createdAt: Date;
     updatedAt: Date;
-    tiles: Tile[];
+    tiles: ITile[];
     createdBy: IUser;
     configs: object[];
   }
-  
-  export interface TileConfig {
-    field: string;
-    type: string;
-    styles: StyleConfig[];
+
+  export interface IPageConfigValue {
+    value: object;
+    type: IPageConfigKey;
   }
-  
-  
-  export interface Tile {
-    name: string;
-    description: string;
-    styleKeys: StyleConfig[];
-    tileType: TileType;
-    configValues: object[];
-    styles: object[];
-  }
-  
-  export interface TileType {
-    type: TileTypes;
-    tileConfigs: TileConfig[];
-  }
-  
-export interface StyleConfig {
-    label: string;
-    key: string;
-    keyType: string;
-  }
-  
+
+  export interface IPageDocument extends IPage, Document {};
+  export interface IPageTypeDocument extends IPageType, Document {};
+  export interface IPageConfigKeyDocument extends IPageConfigKey, Document {};
+  export interface IPageConfigValueDocument extends IPageConfigValue, Document {};
