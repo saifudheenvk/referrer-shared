@@ -1,5 +1,5 @@
 import { Types } from "mongoose";
-import { PageTypes } from "./page.enum";
+import { PageStatus, PageTypes } from "./page.enum";
 import { ITile } from "./tile.interface";
 
 export interface IPageType {
@@ -17,12 +17,14 @@ export interface IPageType {
   
   export interface IPage {
     name: string;
+    description?: string;
     pageType: Types.ObjectId | IPageType;
     createdAt: Date;
     updatedAt: Date;
     tiles: Types.ObjectId[] | ITile[];
     createdBy: string;
     configs: Types.ObjectId[] | IPageConfigValue[];
+    status: PageStatus;
   }
 
   export interface IPageConfigValue {

@@ -5,11 +5,10 @@ import { TileTypes } from "./page.enum";
 export interface ITile {
     name: string;
     description: string;
-    styleKeys: Types.ObjectId[] | IStyleConfig[];
     tileType: Types.ObjectId | ITileType;
     configValues: Types.ObjectId[] | ITileConfigValue[];
     styles: Types.ObjectId[] | IStyleValue[];
-    stylesFromType: Types.ObjectId[] | IStyleValue[];
+    stylesFromKeys: Types.ObjectId[] | IStyleValue[];
     createdAt: Date;
     updatedAt: Date;
 }
@@ -28,6 +27,8 @@ export interface IStyleValue {
 export interface ITileType {
     type: TileTypes;
     tileConfigs: Types.ObjectId[] | ITileConfig[];
+    name: string;
+    styleKeys: Types.ObjectId[] | IStyleConfig[];
 }
 
 export interface ITileConfig {

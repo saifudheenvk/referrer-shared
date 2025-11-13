@@ -18,7 +18,8 @@ export {
 
 export {
     PageTypes,
-    TileTypes
+    TileTypes,
+    PageStatus
 } from './page.enum';
 
 export {
