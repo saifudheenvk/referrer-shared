@@ -22,7 +22,7 @@ export interface IPageType {
     createdAt: Date;
     updatedAt: Date;
     tiles: ITile[];
-    createdBy: Types.ObjectId | IUser;
+    createdBy: string;
     configs: Types.ObjectId[] | IPageConfigValue[];
   }
 
