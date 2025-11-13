@@ -1,7 +1,6 @@
 import { Types } from "mongoose";
 import { PageTypes } from "./page.enum";
 import { ITile } from "./tile.interface";
-import { IUser } from "./user.interface";
 
 export interface IPageType {
     type: PageTypes;
@@ -21,7 +20,7 @@ export interface IPageType {
     pageType: Types.ObjectId | IPageType;
     createdAt: Date;
     updatedAt: Date;
-    tiles: ITile[];
+    tiles: Types.ObjectId[] | ITile[];
     createdBy: string;
     configs: Types.ObjectId[] | IPageConfigValue[];
   }

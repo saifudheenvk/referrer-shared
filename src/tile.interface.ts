@@ -22,7 +22,7 @@ export interface IStyleConfig {
 
 export interface IStyleValue {
     value: string;
-    key: string;
+    key: Types.ObjectId | IStyleConfig;
 }
 
 export interface ITileType {
