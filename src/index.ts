@@ -30,7 +30,8 @@ export {
     IPageDocument,
     IPageTypeDocument,
     IPageConfigKeyDocument,
-    IPageConfigValueDocument
+    IPageConfigValueDocument,
+    ICreatePagePayload
 } from './page.interface';
 
 export {
