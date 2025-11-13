@@ -1,14 +1,15 @@
+import { Types } from "mongoose";
 import { TileTypes } from "./page.enum";
 
 
 export interface ITile {
     name: string;
     description: string;
-    styleKeys: IStyleConfig[];
-    tileType: ITileType;
-    configValues: ITileConfigValue[];
-    styles: IStyleValue[];
-    stylesFromType: IStyleValue[];
+    styleKeys: Types.ObjectId[] | IStyleConfig[];
+    tileType: Types.ObjectId | ITileType;
+    configValues: Types.ObjectId[] | ITileConfigValue[];
+    styles: Types.ObjectId[] | IStyleValue[];
+    stylesFromType: Types.ObjectId[] | IStyleValue[];
     createdAt: Date;
     updatedAt: Date;
 }
@@ -26,18 +27,18 @@ export interface IStyleValue {
 
 export interface ITileType {
     type: TileTypes;
-    tileConfigs: ITileConfig[];
+    tileConfigs: Types.ObjectId[] | ITileConfig[];
 }
 
 export interface ITileConfig {
     field: string;
     type: string;
-    styles: IStyleConfig[];
+    styles: Types.ObjectId[] | IStyleConfig[];
 }
 
 export interface ITileConfigValue {
     value: object;
-    configKey: ITileConfig;
+    configKey: Types.ObjectId | ITileConfig;
 }
 
 export interface ITileDocument extends ITile, Document {};
