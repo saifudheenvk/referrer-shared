@@ -32,6 +32,13 @@ export interface IPageType {
     type: Types.ObjectId | IPageConfigKey;
   }
 
+  export interface ICreatePagePayload {
+    name: string;
+    description?: string;
+    pageType: string;
+    createdBy: string;
+  }
+
   export interface IPageDocument extends IPage, Document {};
   export interface IPageTypeDocument extends IPageType, Document {};
   export interface IPageConfigKeyDocument extends IPageConfigKey, Document {};
